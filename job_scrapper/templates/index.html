@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Python Job Scrapper</title>
+		<link href="{{ url_for('static', filename='main.css') }}" rel="stylesheet">
+		<script src="https://kit.fontawesome.com/b583338b10.js" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<div class="search">
+			<div class="status-bar">
+          		<span class="status-bar__time">33:33</span>
+          		<span class="status-bar__icons">
+            		<i class="fas fa-signal"></i>
+            		<i class="fas fa-wifi"></i>
+            		<i class="fas fa-battery-full"></i>
+          		</span>
+        	</div>
+			<h1 class="search__title">Job Search</h1>
+			<form method="GET" action="/search" class="search__form">
+				<input name="query" placeholder="Need a job?" />
+				<button><i class="fas fa-search"></i></button>
+			</form>
+		</div>
+	</body>
+</html>

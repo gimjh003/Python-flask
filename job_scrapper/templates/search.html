@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Search result : {{query}}</title>
+		<link href="{{ url_for('static', filename='search.css') }}" rel="stylesheet">
+	</head>
+	<body>
+		<h1>Search result : {{query}}</h1>
+		<div class="option">
+			<a href="/">go back</a>
+			<a href="/download?query={{query}}">export as csv</a>
+		</div>
+		{% for job in data %}
+			<a href="{{job.apply}}">
+				<div class="job">
+						<span>{{job.title}}</span>
+						<span>{{job.company}}</span>
+				</div>
+			</a>
+		{% endfor %}
+	</body>
+</html>
